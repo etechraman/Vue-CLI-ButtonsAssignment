@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Assignmentbuttons msg="Hi" />
+    <assignment-buttons msg="Hi" />
   </div>
 </template>
 
 <script>
-import Assignmentbuttons from "./components/Assignmentbuttons.vue";
+import AssignmentButtons from "@/components/AssignmentButtons.vue";
 
 export default {
   name: "App",
   components: {
-    Assignmentbuttons,
+    AssignmentButtons,
   },
 };
 </script>

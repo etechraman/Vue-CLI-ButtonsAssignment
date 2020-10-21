@@ -1,32 +1,27 @@
 <template>
-  <div id="example-1">
+  <div>
     <p>{{ message }}</p>
-    <buttoncounter
-      :text="'Primary'"
-      @handle-click="reverseMessage()"
-      :activeColor="this.activeColor1"
-    />
-    <buttoncounter
-      :text="'Secondary'"
+    <base-button @handle-click="reverseMessage()" />
+    <base-button
+      :propText="'Secondary'"
       @handle-click="greet()"
-      :activeColor="this.activeColor2"
+      :propColor="activeColor"
     />
   </div>
 </template>
 
 <script>
-import buttoncounter from "./buttoncounter.vue";
+import BaseButton from "./BaseButton.vue";
 
 export default {
-  name: "Assignmentbuttons",
+  name: "AssignmentButtons",
   components: {
-    buttoncounter,
+    BaseButton,
   },
   data: () => {
     return {
       message: "Hello Vue.!",
-      activeColor1: "grey",
-      activeColor2: "green",
+      activeColor: "grey",
     };
   },
   methods: {
